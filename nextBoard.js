@@ -3,7 +3,10 @@ const countAliveNeighbours = require('./countAliveNeighbours')
 
 function nextBoard (currentBoard) {
   return currentBoard.map((row, i) => {
-    return row.map((cell, j) => nextCellState(cell, countAliveNeighbours(i, j, currentBoard)))
+    return row.map((cell, j) => {
+      const count = countAliveNeighbours(i, j, currentBoard)
+      return nextCellState(cell, count)
+    })
   })
 }
 

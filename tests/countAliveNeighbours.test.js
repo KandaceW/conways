@@ -1,8 +1,8 @@
-var countAliveNeighbours = require('../countAliveNeighbours')
-var createBoard = require('../createBoard')
+const countAliveNeighbours = require('../countAliveNeighbours')
+const createBoard = require('../createBoard')
 
-test('countAliveNeighbours', function () {
-  var board = createBoard(10)
+test('countAliveNeighbours', () => {
+  const board = createBoard(10)
   board[0][0] = true
   board[0][1] = true
   board[0][2] = true
