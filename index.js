@@ -7,7 +7,7 @@ const refreshInteral = 100
 
 let board = createBoard(size)
 
-setTimeout(() => {
+setInterval(() => {
   displayBoard(board)
   board = nextBoard(board)
 }, refreshInteral)
