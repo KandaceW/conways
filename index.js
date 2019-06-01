@@ -2,12 +2,12 @@ const createBoard = require('./createBoard')
 const nextBoard = require('./nextBoard')
 const displayBoard = require('./displayBoard')
 
-const size = 10
-const refreshInteral = 100
+const size = 20
+const refreshInterval = 200
 
 let board = createBoard(size)
 
-setTimeout(() => {
+setInterval(() => {
   displayBoard(board)
   board = nextBoard(board)
-}, refreshInteral)
+}, refreshInterval)
