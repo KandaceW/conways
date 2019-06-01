@@ -4,7 +4,7 @@ function displayBoard (board) {
 
   for (let i = 0; i < board.length; i++) {
     const row = board[i]
-    console.log(row.map(cell => (cell) ? 'o' : '.').join(' '))
+    console.log(row.map(cell => (cell) ? '0' : '.').join(' '))
   }
   console.log()
 }

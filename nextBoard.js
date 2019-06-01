@@ -13,6 +13,12 @@ function nextBoard (currentBoard) {
     nextBoard.push(nextRow)
   }
   return nextBoard
+//   return currentBoard.map((row, i) => {
+//     return row.map((cell, j) => {
+//       const count = countAliveNeighbours(i, j, currentBoard)
+//       return nextCellState(cell, count)
+//     })
+// })
 }
 
 module.exports = nextBoard
