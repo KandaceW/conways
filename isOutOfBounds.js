@@ -1,8 +1,8 @@
 function isOutOfBounds (index, array) {
     if (array[index]) {
-        return false
+        return false;
     } else {
-        return true
+        return true;
     }
 }
 

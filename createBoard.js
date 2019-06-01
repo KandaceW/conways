@@ -9,6 +9,13 @@ function createBoard (size) {
     return board
 }
 
-console.log(createBoard(3))
+
+let test = createBoard(5)
+
+
+test.forEach(element => {
+    console.log(element);
+});
+
 
 module.exports = createBoard
