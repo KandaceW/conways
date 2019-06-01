@@ -15,22 +15,33 @@ test('getNeighbours in corner', () => {
   expect(actual).toBe(expected)
 })
 
-test('getNeighbours in middle', () => {
-  let total = 0
+test('getNeighbours in center', () => {
   const board = createBoard(10)
-  for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-      if (i === 1 && j === 1) {
-        board[i][j] = "I'm the central cell!"
-        continue
-      }
-      const rando = Math.random()
-      total += rando
-      board[i][j] = rando
+  for (var i = 0; i < board.length; i++){
+    for (var j = 0; j < board.length; j++){
+      board[i][j] = 1
     }
   }
+  const expected = 8
+
   const neighbours = getNeighbours(1, 1, board)
   const actual = neighbours.reduce((sum, val) => (sum + val), 0)
 
-  expect(actual).toBe(total)
+  expect(actual).toBe(expected)
+})
+
+
+test('getNeighbours in corner', () => {
+  const board = createBoard(10)
+  for (var i = 0; i < board.length; i++){
+    for (var j = 0; j < board.length; j++){
+      board[i][j] = 1
+    }
+  }
+  const expected = 5
+
+  const neighbours = getNeighbours(0, 1, board)
+  const actual = neighbours.reduce((sum, val) => (sum + val), 0)
+
+  expect(actual).toBe(expected)
 })

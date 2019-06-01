@@ -1,12 +1,8 @@
 function isOutOfBounds(index, array) {
-    console.log(index, array)
-    var boundsObj = Object.assign({}, array);
-    console.log(typeof array[index])
-    console.log(array[index])
-    if (typeof array[index] == "undefined"){
-        return false
-    }else {
+    if (typeof array[index] === "undefined"){
         return true
+    }else {
+        return false
     }
 }
 

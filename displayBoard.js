@@ -1,6 +1,11 @@
+const createBoard = require('./createBoard')
 function displayBoard (board) {
   // eslint-disable-next-line no-console
-  console.log(board)
+  var clear = require('clear')
+  clear()
+  for(var i = 0; i<board.length; i++){
+    console.log(board[i])
+  }
 }
 
 module.exports = displayBoard
