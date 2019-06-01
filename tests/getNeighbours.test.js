@@ -21,7 +21,7 @@ test('getNeighbours in middle', () => {
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
       if (i === 1 && j === 1) {
-        board[i][j] = "I'm the central cell!"
+        board[i][j] = 'hello'
         continue
       }
       const rando = Math.random()
